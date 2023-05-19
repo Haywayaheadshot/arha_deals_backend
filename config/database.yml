@@ -24,6 +24,8 @@ default: &default
 development:
   <<: *default
   database: arha_deals_backend_development
+  username: user
+  password:
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +60,8 @@ development:
 test:
   <<: *default
   database: arha_deals_backend_test
+  username: user
+  password:
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,5 +86,5 @@ test:
 production:
   <<: *default
   database: arha_deals_backend_production
-  username: arha_deals_backend
-  password: <%= ENV["ARHA_DEALS_BACKEND_DATABASE_PASSWORD"] %>
+  username: user
+  password:
