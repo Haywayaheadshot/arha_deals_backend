@@ -75,3 +75,7 @@ gem 'tailwindcss-rails', '~> 2.0'
 
 # rubocop
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+# Devise
+ gem 'devise'
+ gem 'letter_opener'
