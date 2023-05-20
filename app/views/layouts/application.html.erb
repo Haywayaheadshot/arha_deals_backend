@@ -12,7 +12,10 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <header class="w-full p-2 border-b-black border-2">
+      <%= render "shared/non_user_header" %>
+    </header>
+    <main class="container mx-auto px-5 flex">
       <%= yield %>
     </main>
   </body>
