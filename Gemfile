@@ -77,9 +77,9 @@ gem 'tailwindcss-rails', '~> 2.0'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Devise
- gem 'devise'
- gem 'letter_opener'
+gem 'devise'
+gem 'letter_opener'
 
- # JWT
-  gem 'devise-jwt'
-  gem 'rack-cors'
+# JWT
+gem 'devise-jwt'
+gem 'rack-cors'
