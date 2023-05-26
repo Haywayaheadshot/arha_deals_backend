@@ -13,5 +13,8 @@ Rails.application.routes.draw do
 
     # API endpoint for sign up
     post "/api/signup", to: "api/users#create"
+
+    # API endpoint for log in
+    post "/api/login", to: "api/users#check"
   end
 end
