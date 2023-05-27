@@ -15,7 +15,7 @@ class Api::UsersController < ApplicationController
       render json: { message: 'success', token: }
     else
       # handle sign-in failure
-      render json: { error: 'Wrong username or password' }, status: :unauthorized
+      render json: { error: 'Wrong email or password' }, status: :unauthorized
     end
   end
 
