@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :users
+    resources :phones, only: [:index]
   end
 
   # Defines the root path route ("/")
