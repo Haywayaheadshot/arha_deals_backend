@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_20_005553) do
     t.integer "amount"
     t.integer "stock"
     t.string "images_src", default: [], array: true
-    t.string "specs", default: [], array: true
+    t.jsonb "specs", default: {}
     t.string "condition"
     t.string "video_src"
     t.datetime "created_at", null: false
