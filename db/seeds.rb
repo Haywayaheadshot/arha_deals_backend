@@ -31,7 +31,7 @@ Phone.create(
     amount: 2000,
     stock: 10,
     images_src: ["https://reapp.com.gh/wp-content/uploads/2018/05/217009883.apple-iphone-5s-16gb.jpg", "https://static.jazp.com/uploads_700x600/aeffcab61c2b2ae2e92e4539a210b8ae.jpg", "https://i.cbc.ca/1.1497173.1380779387!/httpImage/hi-iphone5-852.jpg"],
-    specs: [
+    specs: {
         capacity: "64GB",
         body: {
           color: "Space-grey",
@@ -40,7 +40,7 @@ Phone.create(
           batteryHealth: "100%",
           screenSize: "6.2 inches"
         }
-    ],
+    },
     condition: "New",
     video_src: "https://www.youtube.com/embed/uBEaG6n0XDs"
 )
@@ -50,7 +50,7 @@ Phone.create(
     amount: 2500,
     stock: 3,
     images_src: ["https://reapp.com.gh/wp-content/uploads/2018/05/217009883.apple-iphone-5s-16gb.jpg", "https://static.jazp.com/uploads_700x600/aeffcab61c2b2ae2e92e4539a210b8ae.jpg", "https://i.cbc.ca/1.1497173.1380779387!/httpImage/hi-iphone5-852.jpg"],
-    specs: [
+    specs: {
       capacity: "64GB",
       body: {
         color: "Black",
@@ -59,7 +59,7 @@ Phone.create(
         batteryHealth: "80%",
         screenSize: "6.2 inches"
       }
-    ],
+    },
     condition: "Used",
     video_src: "https://www.youtube.com/embed/uBEaG6n0XDs"
 )
@@ -69,7 +69,7 @@ Phone.create(
     amount: 3200,
     stock: 2,
     images_src: ["https://reapp.com.gh/wp-content/uploads/2018/05/217009883.apple-iphone-5s-16gb.jpg", "https://static.jazp.com/uploads_700x600/aeffcab61c2b2ae2e92e4539a210b8ae.jpg", "https://i.cbc.ca/1.1497173.1380779387!/httpImage/hi-iphone5-852.jpg"],
-    specs: [
+    specs: {
       capacity: "128GB",
       body: {
         color: "Gold",
@@ -78,7 +78,7 @@ Phone.create(
         batteryHealth: 100,
         screenSize: "6 inches"
       }
-    ],
+    },
     condition: "New",
     video_src: "https://www.youtube.com/embed/uBEaG6n0XDs"
 )
@@ -88,7 +88,7 @@ Phone.create(
     amount: 3200,
     stock: 1,
     images_src: ["https://reapp.com.gh/wp-content/uploads/2018/05/217009883.apple-iphone-5s-16gb.jpg", "https://static.jazp.com/uploads_700x600/aeffcab61c2b2ae2e92e4539a210b8ae.jpg", "https://i.cbc.ca/1.1497173.1380779387!/httpImage/hi-iphone5-852.jpg"],
-    specs: [
+    specs: {
       capacity: "256GB",
       body: {
         color: "Silver",
@@ -97,7 +97,7 @@ Phone.create(
         batteryHealth: 100,
         screenSize: "6 inches"
       }
-    ],
+    },
     condition: "New",
     video_src: "https://www.youtube.com/embed/uBEaG6n0XDs"
 )
