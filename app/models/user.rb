@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :jwt_authenticatable, jwt_revocation_strategy: self
   include Devise::JWT::RevocationStrategies::JTIMatcher
-
+  has_one :cart
   # Add an "admin" attribute
   attr_accessor :admin
 
