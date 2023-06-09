@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :carts
+  resources :cart_items
   devise_for :users
   resources :users
   resources :phones
@@ -6,6 +8,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :users
     resources :phones, only: [:index]
+    resources :carts, only: [:index]
   end
 
   # Defines the root path route ("/")
