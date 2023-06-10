@@ -1,6 +1,36 @@
 class Api::CartsController < ApplicationController
+  before_action :authenticate_user
+
   def index
-    @cart = Cart.all
-    render json: @cart
+    @cart_items = CartItem.joins(:cart).where(carts: { user_id: current_user_id })
+    render json: @cart_items
+  end
+
+  def add
+    phone_id = add_to_cart_params[:phone_id]
+    puts "Phone ID here #{phone_id}"
+    @cart = Cart.create(user_id: current_user_id)
+    @cart_item = CartItem.create(phone_id:, cart_id: @cart.id)
+    if @cart.save
+      render json: { message: 'Phone has been added to cart', status: 201 }, status: :created
+    else
+      render json: { error: 'Phone was not added to cart. Please refresh your page and try again' },
+             status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def authenticate_user
+    token = request.headers['Authorization']
+    decoded_token = JWT.decode(token, nil, false)
+    payload = decoded_token.first
+    @current_user_id = payload['user_id']
+  end
+
+  attr_reader :current_user_id
+
+  def add_to_cart_params
+    params.permit(:phone_id)
   end
 end
