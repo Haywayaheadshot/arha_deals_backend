@@ -8,7 +8,6 @@ class Api::CartsController < ApplicationController
 
   def add
     phone_id = add_to_cart_params[:phone_id]
-    puts "Phone ID here #{phone_id}"
     @cart = Cart.create(user_id: current_user_id)
     @cart_item = CartItem.create(phone_id:, cart_id: @cart.id)
     if @cart.save
@@ -16,6 +15,18 @@ class Api::CartsController < ApplicationController
     else
       render json: { error: 'Phone was not added to cart. Please refresh your page and try again' },
              status: :unprocessable_entity
+    end
+  end
+
+  def delete
+    phone_id = add_to_cart_params[:phone_id]
+    
+    @cart_items = CartItem.joins(:cart).where(phone_id: phone_id, carts: { user_id: current_user_id })
+    
+    if @cart_items.destroy_all
+      render json: { message: 'Phone has been deleted from cart', status: 200 }
+    else
+      render json: { error: 'Failed to delete phones from cart' }, status: :unprocessable_entity
     end
   end
 
