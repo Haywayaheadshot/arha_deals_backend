@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
     # API endpoint for adding items to the cart
     post "/addtocart", to: "carts#add"
+
+    # API endpoint for removing items to the cart
+    delete "/deletefromcart", to: "carts#delete"
   end
 
   # Defines the root path route ("/")
