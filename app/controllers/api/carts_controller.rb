@@ -20,9 +20,9 @@ class Api::CartsController < ApplicationController
 
   def delete
     phone_id = add_to_cart_params[:phone_id]
-    
-    @cart_items = CartItem.joins(:cart).where(phone_id: phone_id, carts: { user_id: current_user_id })
-    
+
+    @cart_items = CartItem.joins(:cart).where(phone_id:, carts: { user_id: current_user_id })
+
     if @cart_items.destroy_all
       render json: { message: 'Phone has been deleted from cart', status: 200 }
     else
