@@ -3,13 +3,15 @@ class Api::CartsController < ApplicationController
 
   def index
     @cart_items = CartItem.joins(:cart).where(carts: { user_id: current_user_id })
-    render json: @cart_items
+    render json: @cart_items,
+           only: %i[id phone_id cart_id quantity]
   end
 
   def add
     phone_id = add_to_cart_params[:phone_id]
+    quantity = add_to_cart_params[:quantity]
     @cart = Cart.create(user_id: current_user_id)
-    @cart_item = CartItem.create(phone_id:, cart_id: @cart.id)
+    @cart_item = CartItem.create(phone_id:, cart_id: @cart.id, quantity:)
     if @cart.save
       render json: { message: 'Phone has been added to cart', status: 201 }, status: :created
     else
@@ -42,6 +44,6 @@ class Api::CartsController < ApplicationController
   attr_reader :current_user_id
 
   def add_to_cart_params
-    params.permit(:phone_id)
+    params.permit(:phone_id, :quantity)
   end
 end
