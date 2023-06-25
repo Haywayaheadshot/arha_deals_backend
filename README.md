@@ -25,7 +25,7 @@
 
 # Arha Deals Backend <a name="about-project"></a>
 
-**Arha-Deals Backend** is the back-end of [this](https://github.com/Haywayaheadshot/arha_deals/tree/development) front-end e-commerce web application. It sends data containing phones, baby products, and reels with their respective API's. It also holds user data when they register.
+**Arha-Deals Backend** is the back-end of [this](https://github.com/Haywayaheadshot/arha_deals/tree/development) front-end e-commerce web application. It sends data containing phones, baby products, and reels via their respective API's. It also has a UI that allows admin access and allows population of tables. It receives user data from the front-end and stores the data encrypting the password.
 
 ## 🛠 Built With <a name="built-with"></a>
 
