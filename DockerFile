@@ -1,0 +1,16 @@
+FROM node:14
+
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+COPY Gemfile ./
+
+# Install dependencies
+RUN bundle install
+
+# Copy the rest of the project files
+COPY . .
+
+# Set the development command
+CMD ./bin/dev
