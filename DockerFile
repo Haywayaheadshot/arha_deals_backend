@@ -1,16 +1,29 @@
-FROM node:14
+FROM ruby:3.2.2
+
+# Install Node.js and Yarn
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get install -y nodejs && \
+    npm install -g yarn
 
 WORKDIR /app
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
+COPY yarn.lock ./
 COPY Gemfile ./
+COPY Gemfile.lock ./
 
-# Install dependencies
+# Install Node.js dependencies
+RUN yarn install
+
+# Install Ruby dependencies
 RUN bundle install
 
 # Copy the rest of the project files
 COPY . .
+
+# # Set the Rails environment
+# ENV RAILS_ENV=development
 
 # Set the development command
 CMD ./bin/dev
