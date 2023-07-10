@@ -13,7 +13,7 @@ class Api::CartsController < ApplicationController
     @cart = Cart.create(user_id: current_user_id)
     @cart_item = CartItem.create(phone_id:, cart_id: @cart.id, quantity:)
     if @cart.save
-      render json: { message: 'Phone has been added to cart', status: 201 }, status: :created
+      render json: { message: 'Phone has been added to cart', status: 201, added: @cart_item }, status: :created
     else
       render json: { error: 'Phone was not added to cart. Please refresh your page and try again' },
              status: :unprocessable_entity
