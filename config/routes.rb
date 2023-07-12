@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :baby_products
   resources :carts
   resources :cart_items
   devise_for :users
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
     resources :users
     resources :phones, only: [:index]
     resources :carts, only: [:index]
+    resources :baby_products, only: [:index]
 
     # API endpoint for adding items to the cart
     post "/addtocart", to: "carts#add"
