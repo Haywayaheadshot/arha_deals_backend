@@ -159,7 +159,7 @@ BabyProduct.create(
     "USE ON 2 SIDES OF THE MAT: Interesting pattern on both sides",
     "SAFE AND NON TOXIC MATERIAL: 100% BPA-FREE XPE material and had passed ASTM certification. Safe, non toxic, tasteless, non polluting, waterproof and soft.","WATERPROOF & EASY TO CLEAN: Adult supervision is strongly advised at all times while products are being used. Babies and children should never be left alone with the product."
   ],
-  specs: [["Overall Size", `include 18 pcs, Each Tile = 11.8"x11.8"x0.4" (30x30x1cm). Assembled Mat Size = 1.62 Sqm`],
+  specs: [["Overall Size", 'include 18 pcs, Each Tile = 11.8"x11.8"x0.4" (30x30x1cm). Assembled Mat Size = 1.62 Sqm'],
           ["Weight","1.2kgs/2.6lbs"],
           ["Material", "100% BPA-FREE XPE material"]],
   condition: "New. Without box",
