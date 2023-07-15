@@ -196,3 +196,5 @@ BabyProduct.create(
   features: [],
   video_src: ""
 )
+# @cart = Cart.create(user_id: 1)
+# CartItem.create( phone_id: nil, phone_quantity: nil, cart_id: 1 , baby_product_id: 1, baby_products_quantity: 2) 
