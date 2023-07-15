@@ -18,9 +18,12 @@ class Api::CartsController < ApplicationController
     baby_products_quantity_empty = nil
     @cart = Cart.create(user_id: current_user_id)
     if phone_id.blank?
-      @cart_item = CartItem.create(phone_id: phone_id_empty, cart_id: @cart.id, phone_quantity: phone_quantity_empty, baby_product_id:, baby_products_quantity: )
+      @cart_item = CartItem.create(phone_id: phone_id_empty, cart_id: @cart.id, phone_quantity: phone_quantity_empty,
+                                   baby_product_id:, baby_products_quantity:)
     elsif baby_product_id.blank?
-      @cart_item = CartItem.create(phone_id:, cart_id: @cart.id, phone_quantity:, baby_product_id: baby_product_id_empty , baby_products_quantity: baby_products_quantity_empty)
+      @cart_item = CartItem.create(phone_id:, cart_id: @cart.id, phone_quantity:,
+                                   baby_product_id: baby_product_id_empty,
+                                   baby_products_quantity: baby_products_quantity_empty)
     end
     if @cart.save
       render json: { message: 'Phone has been added to cart', status: 201, added: @cart_item }, status: :created
