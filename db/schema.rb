@@ -29,12 +29,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_14_025920) do
   end
 
   create_table "cart_items", force: :cascade do |t|
-    t.bigint "phone_id", null: false
+    t.bigint "phone_id"
     t.integer "phone_quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "cart_id"
-    t.bigint "baby_product_id", null: false
+    t.bigint "baby_product_id"
     t.integer "baby_products_quantity"
     t.index ["baby_product_id"], name: "index_cart_items_on_baby_product_id"
     t.index ["cart_id"], name: "index_cart_items_on_cart_id"
