@@ -30,6 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_14_025920) do
 
   create_table "cart_items", force: :cascade do |t|
     t.bigint "phone_id"
+    t.string "category"
     t.integer "phone_quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
