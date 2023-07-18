@@ -42,7 +42,8 @@ Phone.create(
         }
     },
     condition: "New",
-    video_src: "https://www.youtube.com/embed/uBEaG6n0XDs"
+    video_src: "https://www.youtube.com/embed/uBEaG6n0XDs",
+    category: "phone"
 )
 
 Phone.create(
@@ -61,7 +62,8 @@ Phone.create(
       }
     },
     condition: "Used",
-    video_src: "https://www.youtube.com/embed/uBEaG6n0XDs"
+    video_src: "https://www.youtube.com/embed/uBEaG6n0XDs",
+    category: "phone"
 )
 
 Phone.create(
@@ -80,7 +82,8 @@ Phone.create(
       }
     },
     condition: "New",
-    video_src: "https://www.youtube.com/embed/uBEaG6n0XDs"
+    video_src: "https://www.youtube.com/embed/uBEaG6n0XDs",
+    category: "phone"
 )
 
 Phone.create(
@@ -99,7 +102,8 @@ Phone.create(
       }
     },
     condition: "New",
-    video_src: "https://www.youtube.com/embed/uBEaG6n0XDs"
+    video_src: "https://www.youtube.com/embed/uBEaG6n0XDs",
+    category: "phone"
 )
 
 BabyProduct.create(
@@ -115,7 +119,8 @@ BabyProduct.create(
       ["Fold Size", "87 X 49 X 9.5 CM / 34.25 X 19.29 X 3.74 inch"],
   ],
   condition: "New. With box intact",
-  video_src: "https://www.youtube.com/embed/SZeAXKRsGr0"
+  video_src: "https://www.youtube.com/embed/SZeAXKRsGr0",
+  category: "babyProduct"
 )
 
 BabyProduct.create(
@@ -144,7 +149,8 @@ BabyProduct.create(
     "Lightweight, compact fold.",
     "Easy to store and transport with carry bag."
   ],
-  video_src: "https://www.youtube.com/embed/vNiNsDb-xVQ"
+  video_src: "https://www.youtube.com/embed/vNiNsDb-xVQ",
+  category: "babyProduct"
 )
 
 
@@ -164,7 +170,8 @@ BabyProduct.create(
           ["Material", "100% BPA-FREE XPE material"]],
   condition: "New. Without box",
   features: [],
-  video_src: ""
+  video_src: "",
+  category: "babyProduct"
 )
 
 BabyProduct.create(
@@ -194,7 +201,8 @@ BabyProduct.create(
   ],
   condition: "Used. Without box",
   features: [],
-  video_src: ""
+  video_src: "",
+  category: "babyProduct"
 )
 # @cart = Cart.create(user_id: 1)
 # CartItem.create( phone_id: nil, phone_quantity: nil, cart_id: 1 , baby_product_id: 1, baby_products_quantity: 2) 
