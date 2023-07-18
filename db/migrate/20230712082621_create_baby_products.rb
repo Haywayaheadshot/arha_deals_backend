@@ -10,6 +10,7 @@ class CreateBabyProducts < ActiveRecord::Migration[7.0]
       t.string :features, array: true, default: []
       t.string :condition
       t.string :video_src
+      t.string :category
 
       t.timestamps
     end
