@@ -4,7 +4,7 @@ class Api::CartsController < ApplicationController
   def index
     @cart_items = CartItem.joins(:cart).where(carts: { user_id: current_user_id })
     render json: @cart_items,
-           only: %i[id phone_id cart_id quantity phone_quantity baby_product_id baby_products_quantity category]
+           only: %i[id phone_id cart_id quantity phone_quantity baby_product_id baby_products_quantity]
   end
 
   def add
@@ -19,11 +19,11 @@ class Api::CartsController < ApplicationController
     @cart = Cart.create(user_id: current_user_id)
     if phone_id.blank?
       @cart_item = CartItem.create(phone_id: phone_id_empty, cart_id: @cart.id, phone_quantity: phone_quantity_empty,
-                                   baby_product_id:, baby_products_quantity:, category: 'babyProduct')
+                                   baby_product_id:, baby_products_quantity:)
     elsif baby_product_id.blank?
       @cart_item = CartItem.create(phone_id:, cart_id: @cart.id, phone_quantity:,
                                    baby_product_id: baby_product_id_empty,
-                                   baby_products_quantity: baby_products_quantity_empty, category: 'phone')
+                                   baby_products_quantity: baby_products_quantity_empty)
     end
     if @cart.save
       render json: { message: 'Phone has been added to cart', status: 201, added: @cart_item }, status: :created
