@@ -10,7 +10,7 @@ class Api::CartsController < ApplicationController
   def add
     phone_id = add_to_cart_params[:phone_id]
     phone_id_empty = nil
-    phone_quantity = add_to_cart_params[:quantity]
+    phone_quantity = add_to_cart_params[:phone_quantity]
     phone_quantity_empty = nil
     baby_product_id = add_to_cart_params[:baby_product_id]
     baby_product_id_empty = nil
