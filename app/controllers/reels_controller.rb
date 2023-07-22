@@ -1,5 +1,5 @@
 class ReelsController < ApplicationController
-  before_action :set_reel, only: %i[ show edit update destroy ]
+  before_action :set_reel, only: %i[show edit update destroy]
 
   # GET /reels or /reels.json
   def index
@@ -7,8 +7,7 @@ class ReelsController < ApplicationController
   end
 
   # GET /reels/1 or /reels/1.json
-  def show
-  end
+  def show; end
 
   # GET /reels/new
   def new
@@ -16,8 +15,7 @@ class ReelsController < ApplicationController
   end
 
   # GET /reels/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /reels or /reels.json
   def create
@@ -25,7 +23,7 @@ class ReelsController < ApplicationController
 
     respond_to do |format|
       if @reel.save
-        format.html { redirect_to reel_url(@reel), notice: "Reel was successfully created." }
+        format.html { redirect_to reel_url(@reel), notice: 'Reel was successfully created.' }
         format.json { render :show, status: :created, location: @reel }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class ReelsController < ApplicationController
   def update
     respond_to do |format|
       if @reel.update(reel_params)
-        format.html { redirect_to reel_url(@reel), notice: "Reel was successfully updated." }
+        format.html { redirect_to reel_url(@reel), notice: 'Reel was successfully updated.' }
         format.json { render :show, status: :ok, location: @reel }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +50,20 @@ class ReelsController < ApplicationController
     @reel.destroy
 
     respond_to do |format|
-      format.html { redirect_to reels_url, notice: "Reel was successfully destroyed." }
+      format.html { redirect_to reels_url, notice: 'Reel was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_reel
-      @reel = Reel.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def reel_params
-      params.fetch(:reel, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_reel
+    @reel = Reel.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def reel_params
+    params.fetch(:reel, {})
+  end
 end

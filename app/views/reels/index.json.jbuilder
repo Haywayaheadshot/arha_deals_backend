@@ -1,1 +1,1 @@
-json.array! @reels, partial: "reels/reel", as: :reel
+json.array! @reels, partial: 'reels/reel', as: :reel

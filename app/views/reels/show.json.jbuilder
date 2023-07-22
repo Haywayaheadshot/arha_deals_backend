@@ -1,1 +1,1 @@
-json.partial! "reels/reel", reel: @reel
+json.partial! 'reels/reel', reel: @reel
