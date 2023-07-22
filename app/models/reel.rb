@@ -1,0 +1,2 @@
+class Reel < ApplicationRecord
+end

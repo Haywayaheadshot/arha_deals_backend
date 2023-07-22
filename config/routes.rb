@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reels
   resources :baby_products
   resources :carts
   resources :cart_items
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
     resources :phones, only: [:index]
     resources :carts, only: [:index]
     resources :baby_products, only: [:index]
+    resources :reels, only: [:index]
 
     # API endpoint for adding items to the cart
     post "/addtocart", to: "carts#add"

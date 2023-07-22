@@ -204,5 +204,7 @@ BabyProduct.create(
   video_src: "",
   category: "babyProduct"
 )
+
+# Reel.create(title: "Test_title", duration: {minutes: 3, seconds:32}, video_src: "test_src", category: "phoneHacks", description: "How to do this hack", link: "external link to view this reel") 
 # @cart = Cart.create(user_id: 1)
 # CartItem.create( phone_id: nil, phone_quantity: nil, cart_id: 1 , baby_product_id: 1, baby_products_quantity: 2) 
